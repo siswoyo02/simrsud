@@ -36,7 +36,8 @@
                             <td>{{ $item->jenis_kelamin }}</td>
                             <td>{{ $item->notelpon }}</td>
                             <td>
-                                <button type="button" class="btn btn-info">Edit</button>
+                                
+                                <a href="/tampildatapegawai/{{ $item->id }}" class="btn btn-info">Edit</a>
                                 <button type="button" class="btn btn-danger">Hapus</button>
 
                             </td>

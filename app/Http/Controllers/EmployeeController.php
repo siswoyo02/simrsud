@@ -20,7 +20,17 @@ class EmployeeController extends Controller
     public function insertdatapegawai(Request $request){
         // dd($request->all());
         Employee::create($request->all());
-        return redirect()->route('pegawai');
+        return redirect()->route('pegawai')->with('sukses','data berhasil ditambahkan');
+    }
+    public function tampildatapegawai($id){
+        $pgw = Employee::find($id);
+        //dd($pgw);
+        return view('pegawai/tampildata',compact('pgw'));
+    }
+    public function updatedatapegawai(Request $request, $id){
+        $pgw = Employee::find($id);
+        $pgw->update($request->all());
+        return redirect()->route('pegawai')->with('sukses','data berhasil diupdate');
     }
 
 

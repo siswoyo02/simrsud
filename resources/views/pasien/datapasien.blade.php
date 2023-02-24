@@ -60,9 +60,12 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @php
+                            $no = 1;
+                        @endphp
                         @foreach ($pasplg as $pp)
                             <tr>
-                                <th scope="row">{{ $pp->id }}</th>
+                                <th scope="row">{{ $no++ }}</th>
                                 <td>{{ $pp->no_rm }}</td>
                                 <td>{{ $pp->nama }}</td>
                                 <td>{{ $pp->tgllahir }}</td>

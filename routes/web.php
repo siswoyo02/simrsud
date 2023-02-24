@@ -24,6 +24,7 @@ Route::get('/tambahpegawai',[EmployeeController::class,'tambahpegawai'])->name('
 Route::post('/insertdatapegawai',[EmployeeController::class,'insertdatapegawai'])->name('insertdatapegawai');
 Route::get('/tampildatapegawai/{id}',[EmployeeController::class,'tampildatapegawai'])->name('tampildatapegawai');
 Route::post('/updatedatapegawai/{id}',[EmployeeController::class,'updatedatapegawai'])->name('updatedatapegawai');
+Route::get('/deletedatapegawai/{id}',[EmployeeController::class,'deletedatapegawai'])->name('deletedatapegawai');
 
 Route::get('/pasien',[RpasienpulangController::class,'pas_plg'])->name('pasien');
 Route::get('/tambahpasien',[RpasienpulangController::class,'tambahpasien'])->name('tambahpasien');

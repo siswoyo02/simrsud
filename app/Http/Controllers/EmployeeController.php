@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Employee;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
+// use PDF;
 
 class EmployeeController extends Controller
 {
@@ -52,8 +53,9 @@ class EmployeeController extends Controller
         $pgw = Employee::all();
 
         view()->share('pgw', $pgw);
-        $pdf = PDF::loadView('pegawai/datapegawai-pdf',$pgw);
-        return $pdf->download('invoice.pdf');
+        $pdf = PDF::loadView('pegawai/datapegawai-pdf',compact('pgw'));
+        $pdf->setPaper('F4','potrait');
+        return $pdf->stream('invoice.pdf');
     }
 
 }

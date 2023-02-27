@@ -16,6 +16,13 @@
     <h1 class="text-center mb-4">Pegawai</h1>
     <div class="container">
         <a href="/tambahpegawai" type="button" class="btn btn-success mb-2">Tambah</a>
+        <div class="row g-3 align-items-center mt-2">
+            <div class="col-auto">
+            <form action="/pegawai" method="GET">
+                <input type="search" id="inputPassword6" name="search" class="form-control mb-2" aria-describedby="passwordHelpInline">
+            </form>
+            </div>
+        </div>
         <div class="row">
             <!-- <div class="card"> -->
             <table class="table table-striped table-bordered ">
@@ -30,7 +37,7 @@
                 </thead>
                 <tbody>
                     @php
-                        $no = 1;
+                    $no = 1;
                     @endphp
                     @foreach ($pgw as $item)
                     <tr>
@@ -42,6 +49,7 @@
 
                             <a href="/tampildatapegawai/{{ $item->id }}" class="btn btn-info">Edit</a>
                             <a href="/deletedatapegawai/{{ $item->id }}" class="btn btn-danger">Hapus</a>
+                            <a href="/exportpdfdatapegawai/{{ $item->id }}" class="btn btn-secondary">Print</a>
 
                         </td>
                     </tr>
@@ -53,7 +61,7 @@
         <!-- </div> -->
     </div>
 
-    
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -68,26 +76,26 @@
     -->
 </body>
 <script>
-    // $('.delete').click(function() {
-    //     var pegawainama = $(this).attr('pgw-nama');
+    $('.delete').click(function() {
+        var pegawainama = $(this).attr('pgw-nama');
 
-    //     swal({
-    //             title: "Akan dihapus ?",
-    //             text: "Data pegawai ini "+pegawainama+" akan di hapus ",
-    //             icon: "Peringatan",
-    //             buttons: true,
-    //             dangerMode: true,
-    //         })
-    //         .then((willDelete) => {
-    //             if (willDelete) {
-    //                 swal("File sudah terhapus!", {
-    //                     icon: "sukses",
-    //                 });
-    //             } else {
-    //                 swal("File masih tersimpan !");
-    //             }
-    //         });
-    // });
+        swal({
+                title: "Akan dihapus ?",
+                text: "Data pegawai ini " + pegawainama + " akan di hapus ",
+                icon: "Peringatan",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willDelete) => {
+                if (willDelete) {
+                    swal("File sudah terhapus!", {
+                        icon: "sukses",
+                    });
+                } else {
+                    swal("File masih tersimpan !");
+                }
+            });
+    });
 </script>
 
 </html>

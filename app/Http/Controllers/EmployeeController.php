@@ -4,12 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\Employee;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class EmployeeController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
 
-        $pgw=Employee::all();
+        if($request->has('search')){
+            $pgw = Employee::where('nama','LIKE','%' .$request->search.'%')->paginate(5);
+        }else{
+            $pgw = Employee::paginate(5);
+        }
+
+        // $pgw=Employee::paginate(5);
         return view('pegawai/datapegawai',compact('pgw'));
     }
 
@@ -39,6 +46,14 @@ class EmployeeController extends Controller
         $pgw = Employee::find($id);
         $pgw->delete();
         return redirect()->route('pegawai')->with('sukses','data berhasil dihapus');
+    }
+
+    public function exportpdfdatapegawai(){
+        $pgw = Employee::all();
+
+        view()->share('pgw', $pgw);
+        $pdf = PDF::loadView('pegawai/datapegawai-pdf',$pgw);
+        return $pdf->download('invoice.pdf');
     }
 
 }

@@ -15,6 +15,13 @@
     <h1 class="text-center mb-4">Pasien Pulang</h1>
     <div class="container">
         <a href="/tambahpasien" type="button" class="btn btn-success mb-2">Tambah</a>
+        <div class="row g-3 align-items-center mt-2">
+            <div class="col-auto">
+            <form action="/pasien" method="GET">
+                <input type="search" id="inputPassword6" name="search" class="form-control mb-2" aria-describedby="passwordHelpInline">
+            </form>
+            </div>
+        </div>
         <div class="row">
             <div class="card">
                 <table class="table table-striped">
@@ -30,8 +37,8 @@
                             
                             {{-- <th scope="col">Tgl Masuk</th>
                             <th scope="col">Tgl Keluar</th>
-                            <th scope="col">Dokter Merawat</th> --}}
-                            {{-- <th scope="col">Diagnosa Masuk</th>
+                            <th scope="col">Dokter Merawat</th>
+                            <th scope="col">Diagnosa Masuk</th>
                             <th scope="col">Indikasi Rawat</th>
                             <th scope="col">Diagnosa Keluar</th>
                             <th scope="col">Kode ICD-10</th>
@@ -101,9 +108,9 @@
                                 <td>{{ $pp->kontrolulang }}</td>
                                 <td>{{ $pp->bawarsbila }}</td>  --}}
                                 <td>
-                                    <button type="button" class="btn btn-info">Edit</button>
+                                    <a href="/tampildatapasien/{{$pp->id}}" class="btn btn-info">Edit</a>
                                     <button type="button" class="btn btn-secondary">Print</button>
-                                    <button type="button" class="btn btn-danger">Hapus</button>
+                                    <!-- <a href="/deletedatapasien/{{$pp->id}}" class="btn btn-danger">Hapus</a> -->
     
                                 </td>
                             </tr>                    

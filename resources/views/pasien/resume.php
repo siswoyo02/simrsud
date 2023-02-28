@@ -38,8 +38,8 @@ INNER JOIN b_ms_tindakan_kelas tk ON tk.id = t.ms_tindakan_kelas_id
 inner join b_ms_tindakan mt on tk.ms_tindakan_id = mt.id*/
 ?>
 <div align="center">
-    <table width="545" border="0" cellpadding="0" cellspacing="0">
-        <!-- <tr height="20">
+    <table width="950" border="0" cellpadding="0" cellspacing="0">
+        <tr height="20">
             <td width="20%" align="center" >RSUD<br />TUBAN</td>
             <td width="50%" align="center" ><b>RINGKASAN PASIEN PULANG</b></td>
             <td width="50%" align="left" style="border-top:1px solid; border-left:1px solid; border-bottom:1px solid; border-right:1px solid;font-size: 14px; font-weight: bold">
@@ -49,10 +49,87 @@ inner join b_ms_tindakan mt on tk.ms_tindakan_id = mt.id*/
                 <br><i>Ruang    :</i></br>
                 <br><i>Kelas    :</i></br>
         </td>
-        </tr> -->
-    
+        </tr>
+        <!-- <tr>
+            <td colspan="3">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr height="30">
+                        <td width="3%" style="border-left:1px solid; border-bottom:1px solid;">&nbsp;</td>
+                        <td width="45%" style="border-bottom:1px solid;font-size: 13px; font-weight: bold">&nbsp;Nama Pasien&nbsp;:&nbsp;&nbsp;&nbsp;<b><?php echo $rwPas['nama'];?></b></td>
+                        <td width="25%" style="border-bottom:1px solid;font-size: 13px; font-weight: bold">&nbsp;( <?php echo $rwPas['sex'];?> )&nbsp;Umur&nbsp;:&nbsp;<?php echo $rwPas['umur_thn'];?>&nbsp;tahun</td>
+                        <td width="25%" style="border-bottom:1px solid;font-size: 13px; font-weight: bold">&nbsp;NO RM&nbsp;:&nbsp;<?php echo $rwPas['no_rm'];?></td>
+                        <td width="2%" style="border-bottom:1px solid; border-right:1px solid;font-size: 13px; font-weight: bold">&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
         <tr>
-            <td colspan="2">
+            <td colspan="3">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr style="font-size: 13px; ">
+                        <td width="1%" style="border-left:1px solid;">&nbsp;</td>
+                        <td width="20%">&nbsp;Nama Peserta</td>
+                        <td width="30%">:&nbsp;<?php if ($rwPas['kso_id']!=1) echo $rwPas['nama_peserta'];?></td>
+                        <td width="23%">&nbsp;Nama Perusahaan</td>
+                        <td width="25%">:&nbsp;<?php echo $rwPas['perusahaan'];?></td>
+                        <td width="1%" style="border-right:1px solid;">&nbsp;</td>
+                    </tr>
+                    <tr style="font-size: 13px; ">
+                        <td style="border-left:1px solid;">&nbsp;</td>
+                        <td>&nbsp;Hubungan Keluarga</td>
+                        <td>:&nbsp;<?php if ($rwPas['kso_id']!=1) echo $rwPas['st_anggota'];?></td>
+                        <td>&nbsp;No. Asuransi</td>
+                        <td>:&nbsp;<?php echo $rwPas['no_anggota'];?></td>
+                        <td style="border-right:1px solid;">&nbsp;</td>
+                    </tr>
+                    <tr style="font-size: 13px; ">
+                        <td style="border-left:1px solid;">&nbsp;</td>
+                        <td>&nbsp;Agama</td>
+                        <td>:&nbsp;<?php echo $rwPas['agama'];?></td>
+                        <td>&nbsp;Tanggal Masuk</td>
+                        <td>:&nbsp;<?php echo $rwPas['tgl'];?></td>
+                        <td style="border-right:1px solid;">&nbsp;</td>
+                    </tr>
+                    <tr style="font-size: 13px; ">
+                        <td style="border-left:1px solid;">&nbsp;</td>
+                        <td>&nbsp;Pekerjaan</td>
+                        <td>:&nbsp;<?php echo $rwPas['pekerjaan'];?></td>
+                        <td>&nbsp;Tgl. Keluar/Meninggal</td>
+                        <td>:&nbsp;<?php echo $rwPas['tgl_pulang'];?></td>
+                        <td style="border-right:1px solid;">&nbsp;</td>
+                    </tr>
+                    <tr style="font-size: 13px; ">
+                        <td style="border-left:1px solid;">&nbsp;</td>
+                        <td>&nbsp;Alamat</td>
+                        <td>:&nbsp;<?php echo $rwPas['alamat'];?></td>
+                        <td>&nbsp;Dokter yang merawat</td>
+                        <td>:&nbsp;<?php echo $rwPas['dokterMerawat'];?></td>
+                        <td style="border-right:1px solid;">&nbsp;</td>
+                    </tr>
+                    <tr style="font-size: 13px; ">
+                        <td style="border-left:1px solid;">&nbsp;</td>
+                        <td>&nbsp;Dokter Pengirim</td>
+                        <td>:&nbsp;<?php echo $rwPas['dokterPengirim'];?></td>
+                        <td>&nbsp;Dokter Konsultan</td>
+                        <td>:&nbsp;</td>
+                        <td style="border-right:1px solid;">&nbsp;</td>
+                    </tr>
+                    <tr style="font-size: 13px; ">
+                        <td style="border-left:1px solid; border-bottom:1px solid;">&nbsp;</td>
+                        <td style="border-bottom:1px solid;">&nbsp;Nama Kamar</td>
+                        <td style="border-bottom:1px solid;">:&nbsp;<?php echo $rwKamar['nama'];?></td>
+                        <td style="border-bottom:1px solid;">&nbsp;Nomor Kamar</td>
+                        <td style="border-bottom:1px solid;">:&nbsp;<span style="padding-left: 60px" />Kelas&nbsp;:&nbsp;<?php echo $rwPas['kelas'];?></td>
+                        <td style="border-right:1px solid; border-bottom:1px solid;">&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">&nbsp;</td>
+        </tr> -->
+        <tr>
+            <td colspan="3">
                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
                     <tr style="font-size: 13px; ">
                         <td width="7%" style="border-left:2px solid; border-top:2px solid;">&nbsp;</td>
@@ -72,6 +149,14 @@ inner join b_ms_tindakan mt on tk.ms_tindakan_id = mt.id*/
                         <td align="left"></td>
                         <td style="border-right:2px solid;">&nbsp;</td>
                     </tr>
+                    <!-- <tr style="font-size: 13px; ">
+                        <td style="border-left:1px solid; border-bottom:1px solid;">&nbsp;</td>
+                        <td style="border-bottom:1px solid;">&nbsp;Nama Kamar</td>
+                        <td style="border-bottom:1px solid;">:</td>
+                        <td style="border-bottom:1px solid;">&nbsp;Nomor Kamar</td>
+                        <td style="border-bottom:1px solid;">:</td>
+                        <td style="border-right:1px solid; border-bottom:1px solid;">&nbsp;</td>
+                    </tr> -->
                     <tr style="font-size: 13px; ">
                         <td width="7%" style="border-left:2px solid; border-top:2px solid;">&nbsp;</td>
                         <td width="27%" style="border-top:2px solid;">&nbsp;</td>
@@ -253,17 +338,11 @@ inner join b_ms_tindakan mt on tk.ms_tindakan_id = mt.id*/
                         <td style="border-right:2px solid;">&nbsp;</td>
                     </tr>
                     <tr style="font-size: 13px; ">
-                        <td width="7%" style="border-left:2px solid; border-top:2px solid;">&nbsp;</td>
-                        <td width="27%" style="border-top:2px solid;">&nbsp;</td>
-                        <td width="3%" style="border-top:2px solid;">&nbsp;</td>
-                        <td width="63%" style="border-top:2px solid; border-right:2px solid;">&nbsp;</td>
-                    </tr>
-                    <!-- <tr style="font-size: 13px; ">
                         <td style="border-left:2px solid;" height="50%">&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td style="border-right:2px solid;">&nbsp;</td>
-                    </tr> -->
+                    </tr>
                     <!-- <table width="200" border="0" cellpadding="0" cellspacing="0" align="left">
                         <tr>
                             <td colspan="30" id="tanda_vital">
@@ -273,14 +352,14 @@ inner join b_ms_tindakan mt on tk.ms_tindakan_id = mt.id*/
                             </td>
                         </tr>
                     </table> -->
-                    <!-- <tr style="font-size: 13px; ">
+                    <tr style="font-size: 13px; ">
                         <td colspan="4" style="border-left:2px solid; border-right:2px solid;">
                             <table width="50%" align="center" border="0" cellpadding="0" cellspacing="0">
                                 <tr style="font-size: 13px; ">
                                     <td width="50%" align="center">Pasien / Keluarga Pasien</td>
                                     <td width="40%">&nbsp;</td>
                                     <td width="30%">Tuban,........................ Jam :&nbsp;<br />Dokter yang merawat</td>
-                                    
+                                    <!-- <td width="30%">Tuban,&nbsp;<?php echo $date_now;?><br />Dokter yang merawat</td> -->
                                 </tr>
                                 <tr style="font-size: 13px; ">
                                     <td height="50%">&nbsp;</td>
@@ -301,19 +380,28 @@ inner join b_ms_tindakan mt on tk.ms_tindakan_id = mt.id*/
                                 <td width="0%" align="left">Tanda Tangan dan Nama</td>
                             </table>
                         </td>
-                    </tr> -->
-                    <!-- <tr>
+                    </tr>
+                    <tr>
                         <td style="border-left:2px solid;">&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td style="border-right:2px solid;">&nbsp;</td>
-                    </tr> -->
+                    </tr>
                 </table>
             </td>
         </tr>
-       
+        
+        <tr>
+            <td colspan="4" style="border-left:2px solid; border-bottom:2px solid; border-right:2px solid;">&nbsp;</td>
+        </tr>
+        <tr id="trTombol">
+            <td colspan="4" class="noline" align="center">
+                <input id="btnPrint" type="button" value="Print/Cetak" onClick="cetak(document.getElementById('trTombol'));"/>
+                <input id="btnTutup" type="button" value="Tutup" onClick="window.close();"/>
+            </td>
+        </tr>
     </table>
-	<!-- <script type="text/JavaScript">
+	<script type="text/JavaScript">
 
         function cetak(tombol){
             tombol.style.visibility='collapse';
@@ -328,7 +416,7 @@ inner join b_ms_tindakan mt on tk.ms_tindakan_id = mt.id*/
 
             }
         }
-    </script> -->
+    </script>
 </div>
 <?php 
 // mysql_close($konek);

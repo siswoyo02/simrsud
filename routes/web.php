@@ -36,5 +36,7 @@ Route::post('/insertdatapasien',[RpasienpulangController::class,'insertdatapasie
 Route::get('/tampildatapasien/{id}',[RpasienpulangController::class,'tampildatapasien'])->name('tampildatapasien');
 Route::post('/updatedatapasien/{id}',[RpasienpulangController::class,'updatedatapasien'])->name('updatedatapasien');
 Route::get('/deletedatapasien/{id}',[RpasienpulangController::class,'deletedatapasien'])->name('deletedatapasien');
+//export pdf
+Route::get('/exportpdfdatapasien/{id}',[RpasienpulangController::class,' exportpdfdatapasien'])->name(' exportpdfdatapasien');
 
 //ttg Pasien Balita

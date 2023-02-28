@@ -53,9 +53,9 @@ class EmployeeController extends Controller
         $pgw = Employee::all();
 
         view()->share('pgw', $pgw);
-        $pdf = PDF::loadView('pegawai/datapegawai-pdf',compact('pgw'));
+        $pdf = PDF::loadview('pegawai/datapegawai-pdf',compact('pgw'));
         $pdf->setPaper('F4','potrait');
-        return $pdf->stream('invoice.pdf');
+        return $pdf->stream('pegawai rs.pdf');
     }
 
 }

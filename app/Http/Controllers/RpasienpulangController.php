@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Rpasienpulang;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class RpasienpulangController extends Controller
 {
@@ -43,6 +44,15 @@ class RpasienpulangController extends Controller
         $pasplg = Rpasienpulang::find($id);
         $pasplg->delete();
         return redirect()->route('pasien')->with('sukses','data berhasil dihapus');
+    }
+
+    public function exportpdfdatapasien(){
+        $pasplg = Rpasienpulang::all();
+
+        view()->share('pasplg', $pasplg);
+        $psg = PDF::loadview('pasien/datapasien-pdf',compact('pasplg'));
+        $psg->setPaper('F4','potrait');
+        return $psg->stream('pasien pulang.pdf');
     }
 
 }

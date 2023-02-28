@@ -109,7 +109,7 @@
                                 <td>{{ $pp->bawarsbila }}</td>  --}}
                                 <td>
                                     <a href="/tampildatapasien/{{$pp->id}}" class="btn btn-info">Edit</a>
-                                    <button type="button" class="btn btn-secondary">Print</button>
+                                    <a href="/exportpdfdatapasien/{{ $pp->id }}" class="btn btn-secondary">Print</a>
                                     <!-- <a href="/deletedatapasien/{{$pp->id}}" class="btn btn-danger">Hapus</a> -->
     
                                 </td>

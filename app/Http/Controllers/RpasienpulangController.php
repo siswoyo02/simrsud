@@ -46,13 +46,13 @@ class RpasienpulangController extends Controller
         return redirect()->route('pasien')->with('sukses','data berhasil dihapus');
     }
 
-    public function exportpdfdatapasien(){
-        $pasplg = Rpasienpulang::all();
+    public function exportpdfdatapasien($id){
+        $pasplg = Rpasienpulang::find($id);
 
         view()->share('pasplg', $pasplg);
-        $psg = PDF::loadview('pasien/datapasien-pdf',compact('pasplg'));
-        $psg->setPaper('F4','potrait');
-        return $psg->stream('pasien pulang.pdf');
+        $pdf = PDF::loadview('pasien/datapasien-pdf',compact('pasplg'));
+        $pdf->setPaper('F4','potrait');
+        return $pdf->stream('pasien pulang.pdf');
     }
 
 }

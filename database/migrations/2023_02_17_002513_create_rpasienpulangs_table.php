@@ -17,7 +17,7 @@ class CreateRpasienpulangsTable extends Migration
             $table->id();
             $table->integer('no_rm');
             $table->string('nama');
-            $table->string('tgllahir');
+            $table->date('tgllahir');
             $table->enum('jeniskelamin',['L','P']);
             $table->string('ruang');
             $table->string('kelas');

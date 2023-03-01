@@ -29,10 +29,16 @@
                           <label for="exampleInputEmail1" class="form-label">Nama</label>
                           <input type="text" name="nama" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
-                        <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label">Tgl Lahir</label>
-                          <input type="text" name="tgllahir" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div class="form-group">
+                          <label for="started at">
+                            Tgl Lahir
+                          </label>
+                          <input type="date" id="started at" name="tgllahir" class="form-control">
                         </div>
+                        <!-- <div class="mb-3">
+                          <label for="exampleInputEmail" class="form-label">Tgl Lahir</label>
+                          <input type="text" name="tgllahir" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div> -->
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
                           <select class="form-select" name="jeniskelamin" aria-label="Default select example">
@@ -49,14 +55,26 @@
                           <label for="exampleInputEmail1" class="form-label">Kelas</label>
                           <input type="text" name="kelas" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
-                        <div class="mb-3">
+                        <div class="form-group">
+                          <label for="started at">
+                            Tgl Masuk
+                          </label>
+                          <input type="date" id="started at" name="tglmasuk" class="form-control">
+                        </div>
+                        <!-- <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Tgl Masuk</label>
                           <input type="text" name="tglmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div> -->
+                        <div class="form-group">
+                          <label for="started at">
+                            Tgl Keluar
+                          </label>
+                          <input type="date" id="started at" name="tglkeluar" class="form-control">
                         </div>
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Tgl keluar</label>
                           <input type="text" name="tglkeluar" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        </div>
+                        </div> -->
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Dokter Merawat</label>
                           <input type="text" name="doktermerawat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -89,10 +107,16 @@
                           <label for="exampleInputEmail1" class="form-label">Tindakan</label>
                           <input type="text" name="tindakan" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
-                        <div class="mb-3">
+                        <div class="form-group">
+                          <label for="started at">
+                            Tgl Dilakukan
+                          </label>
+                          <input type="date" id="started at" name="tgldilakukan" class="form-control">
+                        </div>
+                        <!-- <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Tgl Dilakukan</label>
                           <input type="text" name="tgldilakukan" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        </div>
+                        </div> -->
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Kode ICD-9CM</label>
                           <input type="text" name="kodeicd_9cm" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

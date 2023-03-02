@@ -65,7 +65,7 @@
                           <label for="started at">
                             Tgl Keluar
                           </label>
-                          <input type="date" id="started at" name="tglkeluark" class="form-control" value="{{$pasplg->tglkeluar}}">
+                          <input type="date" id="started at" name="tglkeluar" class="form-control" value="{{$pasplg->tglkeluar}}">
                         </div>
                         <!-- <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Tgl keluar</label>

@@ -8,7 +8,7 @@
                 <tr>
                 <td height="25" colspan="4" align="centestyle"="font-size:16px">
                     <div align="center"><b>PEMERINTAH KABUPATEN TUBAN<br />
-                        <img style="position:absolute; margin-left:-5px; left: 13px; top: 15px;" src="/gambar/logotuban.gif" width="65" height="92" align="absmiddle">Rumah Sakit Umum Daerah "Dr. R. KOESMA" Tuban<br />
+                        <img style="position:absolute; margin-left:-5px; left: 13px; top: 15px;" src="public/gambar/logotuban.gif" width="65" height="92" align="absmiddle">Rumah Sakit Umum Daerah "Dr. R. KOESMA" Tuban<br />
                                     Jl. Dr. Wahidin Sudiro Husodo no 800 Tuban Telepon (0356) 321010, 325696<br/>
                                     Riwayat Pasien Pulang<br /></b>
                     </div>

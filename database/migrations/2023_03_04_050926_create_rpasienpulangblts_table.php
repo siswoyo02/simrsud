@@ -36,7 +36,8 @@ class CreateRpasienpulangbltsTable extends Migration
             $table->text('keluhanutama');
             $table->text('gejalapenyerta');
             $table->text('penyakitdahulu');
-            $table->text('pemeriksaanfisik');
+            $table->text('bb');
+            $table->text('tb');
             $table->text('pemeriksaanpenunjang');
             $table->text('laboratorium');
             $table->text('pencintraandiagnostik');

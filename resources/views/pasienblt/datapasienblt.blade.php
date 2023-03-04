@@ -9,15 +9,15 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Data Pasien</title>
+    <title>Data Pasien Balita</title>
 </head>
 <body>
-    <h1 class="text-center mb-4">Pasien Pulang</h1>
+    <h1 class="text-center mb-4">Pasien Pulang Balita</h1>
     <div class="container">
-        <a href="/tambahpasien" type="button" class="btn btn-success mb-2">Tambah</a>
+        <a href="/tambahpasienblt" type="button" class="btn btn-success mb-2">Tambah</a>
         <div class="row g-3 align-items-center mt-2">
             <div class="col-auto">
-            <form action="/pasien" method="GET">
+            <form action="/pasienblt" method="GET">
                 <input type="search" id="inputPassword6" name="search" class="form-control mb-2" aria-describedby="passwordHelpInline">
             </form>
             </div>
@@ -51,7 +51,8 @@
                             <th scope="col">Keluhan Utama</th>
                             <th scope="col">Gejala Penyerta</th>
                             <th scope="col">Penyakit Dahulu</th>
-                            <th scope="col">Pemeriksaan Fisik</th>
+                            <th scope="col">BB</th>
+                            <th scope="col">TB</th>
                             <th scope="col">Pemeriksaan Penunjang</th>
                             <th scope="col">Laboratorium</th>
                             <th scope="col">Pencintraan Diagnostik</th>
@@ -70,47 +71,48 @@
                         @php
                             $no = 1;
                         @endphp
-                        @foreach ($pasplg as $pp)
+                        @foreach ($pasplgblt as $ppb)
                             <tr>
                                 <th scope="row">{{ $no++ }}</th>
-                                <td>{{ $pp->no_rm }}</td>
-                                <td>{{ $pp->nama }}</td>
-                                <td>{{ $pp->tgllahir }}</td>
-                                <td>{{ $pp->jeniskelamin }}</td>
-                                <td>{{ $pp->ruang }}</td>
-                                <td>{{ $pp->kelas }}</td>
+                                <td>{{ $ppb->no_rm }}</td>
+                                <td>{{ $ppb->nama }}</td>
+                                <td>{{ $ppb->tgllahir }}</td>
+                                <td>{{ $ppb->jeniskelamin }}</td>
+                                <td>{{ $ppb->ruang }}</td>
+                                <td>{{ $ppb->kelas }}</td>
 
-                                {{-- <td>{{ $pp->tglmasuk }}</td>
-                                <td>{{ $pp->tglkeluar }}</td>
-                                <td>{{ $pp->doktermerawat }}</td> --}}
-                                {{-- <td>{{ $pp->indikasirawat }}</td>
-                                <td>{{ $pp->diagnosakeluar }}</td>
-                                <td>{{ $pp->kodeicd_10 }}</td>
-                                <td>{{ $pp->komplikasi }}</td>
-                                <td>{{ $pp->komorbid }}</td>
-                                <td>{{ $pp->tindakan }}</td>
-                                <td>{{ $pp->tgldilakukan }}</td>
-                                <td>{{ $pp->kodeicd_9cm }}</td>
+                                {{-- <td>{{ $ppb->tglmasuk }}</td>
+                                <td>{{ $ppb->tglkeluar }}</td>
+                                <td>{{ $ppb->doktermerawat }}</td> --}}
+                                {{-- <td>{{ $ppb->indikasirawat }}</td>
+                                <td>{{ $ppb->diagnosakeluar }}</td>
+                                <td>{{ $ppb->kodeicd_10 }}</td>
+                                <td>{{ $ppb->komplikasi }}</td>
+                                <td>{{ $ppb->komorbid }}</td>
+                                <td>{{ $ppb->tindakan }}</td>
+                                <td>{{ $ppb->tgldilakukan }}</td>
+                                <td>{{ $ppb->kodeicd_9cm }}</td>
 
-                                <td>{{ $pp->keluhanutama }}</td>
-                                <td>{{ $pp->gejalapenyerta }}</td>
-                                <td>{{ $pp->penyakitdahulu }}</td>
-                                <td>{{ $pp->pemeriksaanfisik }}</td>
-                                <td>{{ $pp->pemeriksaanpenunjang }}</td>
-                                <td>{{ $pp->laboratorium }}</td>
-                                <td>{{ $pp->pencintraandiagnostik }}</td>
-                                <td>{{ $pp->lainnya }}</td>
-                                <td>{{ $pp->konsultasi }}</td>
-                                <td>{{ $pp->obatselamarawat }}</td>
-                                <td>{{ $pp->kondisisaatpulang }}</td>
-                                <td>{{ $pp->obatpulang }}</td>
+                                <td>{{ $ppb->keluhanutama }}</td>
+                                <td>{{ $ppb->gejalapenyerta }}</td>
+                                <td>{{ $ppb->penyakitdahulu }}</td>
+                                <td>{{ $ppb->bb }}</td>
+                                <td>{{ $ppb->tb }}</td>
+                                <td>{{ $ppb->pemeriksaanpenunjang }}</td>
+                                <td>{{ $ppb->laboratorium }}</td>
+                                <td>{{ $ppb->pencintraandiagnostik }}</td>
+                                <td>{{ $ppb->lainnya }}</td>
+                                <td>{{ $ppb->konsultasi }}</td>
+                                <td>{{ $ppb->obatselamarawat }}</td>
+                                <td>{{ $ppb->kondisisaatpulang }}</td>
+                                <td>{{ $ppb->obatpulang }}</td>
 
-                                <td>{{ $pp->kontrolulang }}</td>
-                                <td>{{ $pp->bawarsbila }}</td>  --}}
+                                <td>{{ $ppb->kontrolulang }}</td>
+                                <td>{{ $ppb->bawarsbila }}</td>  --}}
                                 <td>
-                                    <a href="/tampildatapasien/{{$pp->id}}" class="btn btn-info">Edit</a>
-                                    <a href="/exportpdfdatapasien/{{ $pp->id }}" class="btn btn-secondary">Print</a>
-                                    <a href="/deletedatapasien/{{$pp->id}}" class="btn btn-danger">Hapus</a>
+                                    <a href="/tampildatapasienblt/{{$ppb->id}}" class="btn btn-info">Edit</a>
+                                    <a href="/exportpdfdatapasienblt/{{ $ppb->id }}" class="btn btn-secondary">Print</a>
+                                    <a href="/deletedatapasienblt/{{$ppb->id}}" class="btn btn-danger">Hapus</a>
     
                                 </td>
                             </tr>                    

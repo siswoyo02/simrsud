@@ -9,17 +9,17 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Data Pasien</title>
+    <title>Data Pasien Balita</title>
 </head>
 
 <body>
-    <h1 class="text-center mb-4">Tambah Data Pasien</h1>
+    <h1 class="text-center mb-4">Tambah Data Pasien Balita</h1>
     <div class="container">
         <div class="row">
           <div class="col-6">
             <div class="card">
                 <div class="card-body">
-                    <form action="/insertdatapasien" method="POST" enctype="multipart/form-data">
+                    <form action="/insertdatapasienblt" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">No.Rm</label>
@@ -134,8 +134,12 @@
                           <input type="text" name="penyakitdahulu" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label">Pemeriksaan Fisik</label>
-                          <input type="text" name="pemeriksaanfisik" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <label for="exampleInputEmail1" class="form-label">BB</label>
+                          <input type="text" name="bb" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">TB</label>
+                          <input type="text" name="tb" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Pemeriksaan Penunjang</label>

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\RpasienpulangController;
+use App\Http\Controllers\RpasienpulangbltController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,12 +40,14 @@ Route::get('/deletedatapasien/{id}',[RpasienpulangController::class,'deletedatap
 //export pdf
 Route::get('/exportpdfdatapasien/{id}',[RpasienpulangController::class,'exportpdfdatapasien'])->name('exportpdfdatapasien');
 
-//ttg Pasien Balita
-Route::get('/pasienb',[RpasienbalitaplgController::class,'pasb_plg'])->name('pasienb');
-Route::get('/tambahpasienb',[RpasienbalitaplgController::class,'tambahpasienb'])->name('tambahpasienb');
-// Route::post('/insertdatapasienb',[RpasienbalitaplgController::class,'insertdatapasienb'])->name('insertdatapasienb');
-// Route::get('/tampildatapasienb/{id}',[RpasienbalitaplgController::class,'tampildatapasienb'])->name('tampildatapasienb');
-// Route::post('/updatedatapasienb/{id}',[RpasienbalitaplgController::class,'updatedatapasienb'])->name('updatedatapasienb');
-// Route::get('/deletedatapasienb/{id}',[RpasienbalitaplgController::class,'deletedatapasienb'])->name('deletedatapasienb');
-// //export pdf
-// Route::get('/exportpdfdatapasienb/{id}',[RpasienbalitaplgController::class,'exportpdfdatapasienb'])->name('exportpdfdatapasienb');
+//ttg Pasien Pulang Balita
+Route::get('/pasienblt',[RpasienpulangbltController::class,'pas_plgblt'])->name('pasienblt');
+Route::get('/tambahpasienblt',[RpasienpulangbltController::class,'tambahpasienblt'])->name('tambahpasienblt');
+Route::post('/insertdatapasienblt',[RpasienpulangbltController::class,'insertdatapasienblt'])->name('insertdatapasienblt');
+Route::get('/tampildatapasienblt/{id}',[RpasienpulangbltController::class,'tampildatapasienblt'])->name('tampildatapasienblt');
+Route::post('/updatedatapasienblt/{id}',[RpasienpulangbltController::class,'updatedatapasienblt'])->name('updatedatapasienblt');
+Route::get('/deletedatapasienblt/{id}',[RpasienpulangbltController::class,'deletedatapasienblt'])->name('deletedatapasienblt');
+//export pdf
+Route::get('/exportpdfdatapasienblt/{id}',[RpasienpulangbltController::class,'exportpdfdatapasienblt'])->name('exportpdfdatapasienblt');
+
+

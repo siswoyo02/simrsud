@@ -9,15 +9,15 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Data Pasien Balita</title>
+    <title>Data Pasien</title>
 </head>
 <body>
-    <h1 class="text-center mb-4">Pasien Balita Pulang</h1>
+    <h1 class="text-center mb-4">Pasien Pulang</h1>
     <div class="container">
-        <a href="/tambahpasienb" type="button" class="btn btn-success mb-2">Tambah</a>
+        <a href="/tambahpasien" type="button" class="btn btn-success mb-2">Tambah</a>
         <div class="row g-3 align-items-center mt-2">
             <div class="col-auto">
-            <form action="/pasienb" method="GET">
+            <form action="/pasien" method="GET">
                 <input type="search" id="inputPassword6" name="search" class="form-control mb-2" aria-describedby="passwordHelpInline">
             </form>
             </div>

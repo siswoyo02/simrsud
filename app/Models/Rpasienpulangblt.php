@@ -5,7 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Rpasienbalitaplg extends Model
+class Rpasienpulangblt extends Model
 {
     use HasFactory;
+    
+    protected $guarded = [];
 }

@@ -335,7 +335,9 @@
     </tr>
     <tr class="mb-6" style="font-size: 13px; ">
         <td align="center" style="border-left:2px solid;"></td>
-        <td></td>
+        <td>
+
+        </td>
         <td align="center">&nbsp;&nbsp;Pasien/Keluarga Pasien</td>
         <td>Tuban, ...................... Jam:.........</td>
         <td align="center"></td>
@@ -403,7 +405,6 @@
         <td align="center"></td>
         <td style="border-right:2px solid;">&nbsp;</td>
     </tr>
-    
     </table>
     <table width="550" border="0" cellpadding="0" cellspacing="0">
         <tr style="font-size: 13px; ">

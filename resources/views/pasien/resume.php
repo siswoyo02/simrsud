@@ -343,15 +343,6 @@ inner join b_ms_tindakan mt on tk.ms_tindakan_id = mt.id*/
                         <td>&nbsp;</td>
                         <td style="border-right:2px solid;">&nbsp;</td>
                     </tr>
-                    <!-- <table width="200" border="0" cellpadding="0" cellspacing="0" align="left">
-                        <tr>
-                            <td colspan="30" id="tanda_vital">
-                                <fieldset class="kotak">
-                                
-                                </fieldset>
-                            </td>
-                        </tr>
-                    </table> -->
                     <tr style="font-size: 13px; ">
                         <td colspan="4" style="border-left:2px solid; border-right:2px solid;">
                             <table width="50%" align="center" border="0" cellpadding="0" cellspacing="0">

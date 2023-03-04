@@ -40,8 +40,8 @@ Route::get('/deletedatapasien/{id}',[RpasienpulangController::class,'deletedatap
 Route::get('/exportpdfdatapasien/{id}',[RpasienpulangController::class,'exportpdfdatapasien'])->name('exportpdfdatapasien');
 
 //ttg Pasien Balita
-// Route::get('/pasienb',[RpasienbalitaplgController::class,'pasb_plg'])->name('pasienb');
-// Route::get('/tambahpasienb',[RpasienbalitaplgController::class,'tambahpasienb'])->name('tambahpasienb');
+Route::get('/pasienb',[RpasienbalitaplgController::class,'pasb_plg'])->name('pasienb');
+Route::get('/tambahpasienb',[RpasienbalitaplgController::class,'tambahpasienb'])->name('tambahpasienb');
 // Route::post('/insertdatapasienb',[RpasienbalitaplgController::class,'insertdatapasienb'])->name('insertdatapasienb');
 // Route::get('/tampildatapasienb/{id}',[RpasienbalitaplgController::class,'tampildatapasienb'])->name('tampildatapasienb');
 // Route::post('/updatedatapasienb/{id}',[RpasienbalitaplgController::class,'updatedatapasienb'])->name('updatedatapasienb');

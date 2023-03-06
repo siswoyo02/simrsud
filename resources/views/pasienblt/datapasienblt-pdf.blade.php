@@ -8,9 +8,10 @@
                 <tr>
                 <td height="50" colspan="4" align="centestyle"="font-size:16px">
                     <div align="center"><b>PEMERINTAH KABUPATEN TUBAN<br />
-                        <img style="position:absolute; margin-left:-10px; left: 26px; top: 0px;" src="public/gambar/logotuban.png" width="65" height="92" align="absmiddle">Rumah Sakit Umum Daerah "Dr. R. KOESMA" Tuban<br />
-                                    Jl. Dr. Wahidin Sudiro Husodo no 800 Tuban Telepon (0356) 321010, 325696<br/>
+                        <img style="position:absolute; margin-left:-15px; left: 39px; top: 0px;" src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('gambar/tbn.png'))) }}" width="60" height="70" align="absmiddle">Rumah Sakit Umum Daerah "Dr. R. KOESMA" Tuban<br />
+                                    Jl. Dr. Wahidin Sudiro Husodo No. 800 Tuban 62315 Telp. (0356) 321010<br/>
                                     <b>Riwayat Pasien Pulang<br /></b>
+                        <img style="position:absolute; margin-left:-15px; left: 660px; top: 0px;" src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('gambar/rs.png'))) }}" width="70" height="70" align="absmiddle">
                     </div>
                 </td>
                  </tr>
@@ -27,6 +28,7 @@
                         <td align="center" style="border-left:2px solid;"></td>
                         <td>No.Rm </td>
                         <td>:&nbsp;<?php echo $pasplgblt["no_rm"];?></td>
+                        <td>&nbsp;&nbsp;&nbsp;Tgl Masuk : <?php echo $pasplgblt["tglmasuk"];?>&nbsp;&nbsp;&nbsp;Jam :...</td>
                         <td align="left"></td>
                         <td style="border-right:2px solid;">&nbsp;</td>
                     </tr>
@@ -34,14 +36,14 @@
                         <td style="border-left:2px solid;">&nbsp;</td>
                         <td>Nama </td>
                         <td>:&nbsp;<?php echo $pasplgblt["nama"];?></td>
+                        <td>&nbsp;&nbsp;&nbsp;Tgl Masuk : <?php echo $pasplgblt["tglkeluar"];?>&nbsp;&nbsp;&nbsp;Jam :...</td>
                         <td align="left"></td>
                         <td style="border-right:2px solid;">&nbsp;</td>
                     </tr>
                     <tr style="font-size: 13px; ">
                         <td align="center" style="border-left:2px solid;">&nbsp;</td>
                         <td>Tgl Lahir</td>
-                        <td>:&nbsp;<?php echo $pasplgblt["tgllahir"];?></td>
-                        <td>&nbsp;Jenis Kelamin : <?php echo $pasplgblt["jeniskelamin"];?></td>
+                        <td>:&nbsp;<?php echo $pasplgblt["tgllahir"];?>&nbsp;&nbsp;&nbsp;( <?php echo $pasplgblt["jeniskelamin"];?> )</td>
                         <td style="border-right:2px solid;">&nbsp;</td>
                     </tr>
                     <tr style="font-size: 13px; ">
@@ -67,14 +69,14 @@
                     <tr style="font-size: 13px; ">
                         <td align="center" style="border-left:2px solid;">&nbsp;</td>
                         <td>Tgl Masuk</td>
-                        <td>:&nbsp;<?php echo $pasplgblt["tglmasuk"];?></td>
-                        <td>&nbsp;Dokter yang merawat : <?php echo $pasplgblt["doktermerawat"];?></td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;Jam :...</td>
+                        <td>&nbsp;&nbsp;&nbsp;Dokter yang merawat : Dr. <?php echo $pasplgblt["doktermerawat"];?></td>
                         <td style="border-right:2px solid;">&nbsp;</td>
                     </tr>
                     <tr style="font-size: 13px; ">
                         <td style="border-left:2px solid;">&nbsp;</td>
                         <td>Tgl Keluar</td>
-                        <td>:&nbsp;<?php echo $pasplgblt["tglkeluar"];?></td>
+                        <td>:&nbsp;<?php echo $pasplgblt["tglkeluar"];?>&nbsp;&nbsp;&nbsp;Jam :...</td>
                         <td align="left"></td>
                         <td style="border-right:2px solid;">&nbsp;</td>
                     </tr>
@@ -110,7 +112,7 @@
                         <td style="border-left:2px solid;">&nbsp;</td>
                         <td> </td>
                         <td>&nbsp;</td>
-                        <td>&nbsp;Kode ICD-10 : <?php echo $pasplgblt["kodeicd_10"];?></td>
+                        <td>&nbsp;&nbsp;&nbsp;Kode ICD-10 : <?php echo $pasplgblt["kodeicd_10"];?></td>
                         <!-- <td align="left"></td> -->
                         <td style="border-right:2px solid;">&nbsp;</td>
                     </tr>
@@ -139,7 +141,7 @@
                         <td style="border-left:2px solid;">&nbsp;</td>
                         <td> </td>
                         <td>&nbsp;</td>
-                        <td>&nbsp;Tgl Dilakukan : <?php echo $pasplgblt["tgldilakukan"];?></td>
+                        <td>&nbsp;&nbsp;&nbsp;Tgl Dilakukan : <?php echo $pasplgblt["tgldilakukan"];?></td>
                         <!-- <td align="left"></td> -->
                         <td style="border-right:2px solid;">&nbsp;</td>
                     </tr>
@@ -147,7 +149,7 @@
                         <td style="border-left:2px solid;">&nbsp;</td>
                         <td> </td>
                         <td>&nbsp;</td>
-                        <td>&nbsp;Kode ICD-9 CM : <?php echo $pasplgblt["kodeicd_9cm"];?></td>
+                        <td>&nbsp;&nbsp;&nbsp;Kode ICD-9 CM : <?php echo $pasplgblt["kodeicd_9cm"];?></td>
                         <!-- <td align="left"></td> -->
                         <td style="border-right:2px solid;">&nbsp;</td>
                     </tr>
@@ -208,15 +210,15 @@
                     </tr>
                     <tr style="font-size: 13px; ">
                         <td align="center" style="border-left:2px solid;"></td>
-                        <td>&nbsp;&nbsp;&nbsp; * BB </td>
-                        <td>:&nbsp;<?php echo $pasplgblt["bb"];?></td>
+                        <td>&nbsp;&nbsp;&nbsp; * BB ( gram )</td>
+                        <td>:&nbsp;<?php echo $pasplgblt["bb"];?>&nbsp;gram</td>
                         <td align="center"></td>
                         <td style="border-right:2px solid;">&nbsp;</td>
                     </tr>
                     <tr style="font-size: 13px; ">
                         <td align="center" style="border-left:2px solid;"></td>
-                        <td>&nbsp;&nbsp;&nbsp; * TB </td>
-                        <td>:&nbsp;<?php echo $pasplgblt["tb"];?></td>
+                        <td>&nbsp;&nbsp;&nbsp; * TB ( cm )</td>
+                        <td>:&nbsp;<?php echo $pasplgblt["tb"];?>&nbsp;cm</td>
                         <td align="center"></td>
                         <td style="border-right:2px solid;">&nbsp;</td>
                     </tr>
@@ -399,7 +401,7 @@
         <td align="center" style="border-left:2px solid;"></td>
         <td></td>
         <td align="center">&nbsp;&nbsp;&nbsp;(..............................................)</td>
-        <td>( <?php echo $pasplgblt["doktermerawat"];?> )</td>
+        <td>( Dr. <?php echo $pasplgblt["doktermerawat"];?> )</td>
         <td align="center"></td>
         <td style="border-right:2px solid;">&nbsp;</td>
     </tr>

@@ -173,7 +173,7 @@
                           <label for="exampleInputEmail1" class="form-label">DS</label>
                           <select class="form-select" name="ds" aria-label="Default select example" value="{{$pasplgblt->ds}}">
                             <option selected>{{$pasplgblt->ds}}</option>
-                            <option value="1">1</option>
+                            <option value="0">0</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>

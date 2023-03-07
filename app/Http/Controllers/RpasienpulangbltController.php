@@ -52,7 +52,7 @@ class RpasienpulangbltController extends Controller
         view()->share('pasplgblt', $pasplgblt);
         $pdf = PDF::loadview('pasienblt/datapasienblt-pdf',compact('pasplgblt'));
         $pdf->set_option('isRemoteEnabled', TRUE);
-        $pdf->setPaper('F4','potrait');
+        $pdf->setPaper('folio','potrait');
         return $pdf->stream('pasien pulangblt.pdf');
     }
 }

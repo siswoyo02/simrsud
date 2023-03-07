@@ -7,13 +7,14 @@
     "require": {
         "php": "^7.3|^8.0",
         "barryvdh/laravel-dompdf": "^2.0",
+        "doctrine/dbal": "^3.6",
         "dompdf/dompdf": "^2.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "kylekatarnls/laravel-carbon-2": "^1.0.0",
         "laravel/framework": "^8.54",
         "laravel/tinker": "^2.5",
-        "nesbot/carbon": "^2.66",
-        "kylekatarnls/laravel-carbon-2": "^1.0.0"
+        "nesbot/carbon": "^2.66"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

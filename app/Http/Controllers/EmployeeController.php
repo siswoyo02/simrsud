@@ -12,9 +12,9 @@ class EmployeeController extends Controller
     public function index(Request $request){
 
         if($request->has('search')){
-            $pgw = Employee::where('nama','LIKE','%' .$request->search.'%')->paginate(5);
+            $pgw = Employee::where('nama','LIKE','%' .$request->search.'%')->paginate(10);
         }else{
-            $pgw = Employee::paginate(5);
+            $pgw = Employee::paginate(10);
         }
 
         // $pgw=Employee::paginate(5);

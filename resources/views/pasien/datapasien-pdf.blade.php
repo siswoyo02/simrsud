@@ -4,13 +4,14 @@
     <table width="550" border="0" cellpadding="0" cellspacing="0">
         <tr>
             <td colspan="0">
-                <table width="550" border="0" cellpadding="0" cellspacing="10">
+            <table width="550" border="0" cellpadding="0" cellspacing="10">
                 <tr>
                 <td height="50" colspan="4" align="centestyle"="font-size:16px">
                     <div align="center"><b>PEMERINTAH KABUPATEN TUBAN<br />
-                        <img style="position:absolute; margin-left:-10px; left: 26px; top: 0px;" src="public/gambar/logotuban.png" width="65" height="92" align="absmiddle">Rumah Sakit Umum Daerah "Dr. R. KOESMA" Tuban<br />
-                                    Jl. Dr. Wahidin Sudiro Husodo no 800 Tuban Telepon (0356) 321010, 325696<br/>
+                        <img style="position:absolute; margin-left:-15px; left: 39px; top: 0px;" src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('gambar/tbn.png'))) }}" width="60" height="70" align="absmiddle">Rumah Sakit Umum Daerah "Dr. R. KOESMA" Tuban<br />
+                                    Jl. Dr. Wahidin Sudiro Husodo No. 800 Tuban 62315 Telp. (0356) 321010<br/>
                                     <b>Riwayat Pasien Pulang<br /></b>
+                        <img style="position:absolute; margin-left:-15px; left: 660px; top: 0px;" src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('gambar/rs.png'))) }}" width="70" height="70" align="absmiddle">
                     </div>
                 </td>
                  </tr>

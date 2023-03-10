@@ -10,9 +10,9 @@ class RpasienpulangbltController extends Controller
     public function pas_plgblt(Request $request){
 
         if($request->has('search')){
-            $pasplgblt = Rpasienpulangblt::where('no_rm','LIKE','%' .$request->search.'%')->paginate(5);
+            $pasplgblt = Rpasienpulangblt::where('no_rm','LIKE','%' .$request->search.'%')->Paginate(8);
         }else{
-            $pasplgblt = Rpasienpulangblt::paginate(5);
+            $pasplgblt = Rpasienpulangblt::Paginate(8);
         }
 
         return view('pasienblt/datapasienblt',compact('pasplgblt'));

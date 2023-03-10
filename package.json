@@ -10,14 +10,16 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@popperjs/core": "^2.11.6",
         "axios": "^0.21",
+        "bootstrap": "^5.2.3",
+        "bootstrap-icons": "^1.10.3",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14"
     },
     "dependencies": {
         "air-datepicker": "^3.3.5",
-        "bootstrap": "^5.2.3",
         "sass": "^1.58.3",
         "sass-loader": "^13.2.0"
     }

@@ -45,9 +45,9 @@
                     @php
                     $no = 1;
                     @endphp
-                    @foreach ($pgw as $item)
-                    <tr>
-                        <th scope="row">{{ $no++ }}</th>
+                    @foreach ($pgw as $index => $item)
+                        <tr>
+                            <th scope="row">{{ $index + $pgw->firstItem() }}</th>
                         <td>{{ $item->nama }}</td>
                         <td>{{ $item->jenis_kelamin }}</td>
                         <td>{{ $item->notelpon }}</td>
@@ -60,10 +60,9 @@
                         </td>
                     </tr>
                     @endforeach
-
                 </tbody>
             </table>
-            {{ $pgw->links() }}
+            {{ $pgw->links('pagination::Bootstrap-4') }}
         </div>
         <!-- </div> -->
     </div>

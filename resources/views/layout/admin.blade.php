@@ -67,7 +67,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-blue-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="" class="brand-link">
       <img src="{{ asset('tema/dist/img/logors.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">RSUD Tuban</span>
     </a>
@@ -86,14 +86,14 @@
 
       <!-- SidebarSearch Form -->
       <div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
+        <!-- <div class="input-group" data-widget="sidebar-search">
           <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
           <div class="input-group-append">
             <button class="btn btn-sidebar">
               <i class="fas fa-search fa-fw"></i>
             </button>
           </div>
-        </div>
+        </div> -->
       </div>
 
       <!-- Sidebar Menu -->
@@ -737,14 +737,20 @@
     <!-- /.sidebar -->
   </aside>
 
-  <!-- Content Wrapper. Contains page content -->
+  <!-- Content utama-->
 @yield('content')
-  <!-- /.content-wrapper -->
+  <!-- /.content-pegawai -->
 @yield('contentpgw')
-  <!-- /.content-wrapper -->
+@yield('contentpgwtambah')
+@yield('contentpgwtampil')
+  <!-- /.content-pasienr -->
 @yield('contentpsn')
-  <!-- /.content-wrapper -->
+@yield('contentpsntambah')
+@yield('contentpsntampil')
+  <!-- /.content-pasien balita -->
 @yield('contentpsnblt')
+@yield('contentpsnblttambah')
+@yield('contentpsnblttampil')
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-blue">
     <!-- Control sidebar content goes here -->
@@ -784,7 +790,7 @@
 <!-- AdminLTE App -->
 <script src="{{ asset('tema/dist/js/adminlte.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{ asset('tema/dist/js/demo.js') }}"></script>
+<!-- <script src="{{ asset('tema/dist/js/demo.js') }}"></script> -->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{ asset('tema/dist/js/pages/dashboard.js') }}"></script>
 </body>

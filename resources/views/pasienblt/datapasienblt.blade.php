@@ -78,9 +78,9 @@
                         @php
                         $no = 1;
                         @endphp
-                        @foreach ($pasplgblt as $ppb)
+                        @foreach ($pasplgblt as $index => $ppb)
                         <tr>
-                            <th scope="row">{{ $no++ }}</th>
+                            <th scope="row">{{ $index + $pasplgblt->firstItem() }}</th>
                             <td>{{ $ppb->no_rm }}</td>
                             <td>{{ $ppb->nama }}</td>
                             <td>{{ $ppb->tgllahir }}</td>
@@ -126,6 +126,7 @@
                         @endforeach
                     </tbody>
                 </table>
+                {{ $pasplgblt->links('pagination::Bootstrap-4') }}
             </div>
         </div>
     </div>

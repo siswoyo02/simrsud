@@ -10,9 +10,9 @@ class RpasienpulangController extends Controller
     public function pas_plg(Request $request){
 
         if($request->has('search')){
-            $pasplg = Rpasienpulang::where('no_rm','LIKE','%' .$request->search.'%')->paginate(5);
+            $pasplg = Rpasienpulang::where('no_rm','LIKE','%' .$request->search.'%')->paginate(7);
         }else{
-            $pasplg = Rpasienpulang::paginate(5);
+            $pasplg = Rpasienpulang::paginate(7);
         }
 
         return view('pasien/datapasien',compact('pasplg'));

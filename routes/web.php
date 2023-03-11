@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\RpasienpulangController;
+use App\Http\Controllers\MpasienpulangController;
 use App\Http\Controllers\RpasienpulangbltController;
+use App\Http\Controllers\MspasienController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,5 +51,4 @@ Route::post('/updatedatapasienblt/{id}',[RpasienpulangbltController::class,'upda
 Route::get('/deletedatapasienblt/{id}',[RpasienpulangbltController::class,'deletedatapasienblt'])->name('deletedatapasienblt');
 //export pdf
 Route::get('/exportpdfdatapasienblt/{id}',[RpasienpulangbltController::class,'exportpdfdatapasienblt'])->name('exportpdfdatapasienblt');
-
 

@@ -10,4 +10,6 @@ class Rpasienpulangblt extends Model
     use HasFactory;
     
     protected $guarded = [];
+    protected $connection = 'mysql2';
+    protected $table = 'rpasienpulangblts';
 }

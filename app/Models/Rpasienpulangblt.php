@@ -12,4 +12,5 @@ class Rpasienpulangblt extends Model
     protected $guarded = [];
     protected $connection = 'mysql2';
     protected $table = 'rpasienpulangblts';
+    protected $dates = ['tgllahir','tglmasuk','tglkeluar','tgldilakukan','tglkontrol'];
 }

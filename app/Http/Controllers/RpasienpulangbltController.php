@@ -17,6 +17,7 @@ class RpasienpulangbltController extends Controller
 
         return view('pasienblt/datapasienblt',compact('pasplgblt'));
     }
+    
 
     public function tambahpasienblt(){
         return view('pasienblt/tambahdatablt');

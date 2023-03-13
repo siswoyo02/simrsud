@@ -39,7 +39,7 @@
                           <label for="started at">
                             Tgl Lahir
                           </label>
-                          <input type="date" id="started at" name="tgllahir" class="form-control">
+                          <input type="dateTime" id="started at" name="tgllahir" class="form-control">
                         </div>
                         <!-- <div class="mb-3">
                           <label for="exampleInputEmail" class="form-label">Tgl Lahir</label>

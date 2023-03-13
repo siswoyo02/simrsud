@@ -138,7 +138,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="/pasienblt" class="nav-link">
+            <a href="/pasienbltbr" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Data Pasien Balita baru

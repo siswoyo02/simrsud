@@ -50,4 +50,6 @@ Route::get('/deletedatapasienblt/{id}',[RpasienpulangbltController::class,'delet
 //export pdf
 Route::get('/exportpdfdatapasienblt/{id}',[RpasienpulangbltController::class,'exportpdfdatapasienblt'])->name('exportpdfdatapasienblt');
 
+Route::get('/pasplgbalita',[RpasienpulangbltController::class,'pasplgbalita'])->name('pasplgbalita');
+Route::get('/pasplgbalitaagama',[RpasienpulangbltController::class,'pasplgbalitaagama'])->name('pasplgbalitaagama');
 

@@ -35,19 +35,13 @@
                           <label for="exampleInputEmail1" class="form-label">Nama</label>
                           <input type="text" name="nama" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$pasplgblt->nama}}">
                         </div>
-                        <div class="form-group">
-                          <label for="started at">
-                            Tgl Lahir
-                          </label>
-                          <input type="date" id="started at" name="tgllahir" class="form-control" value="{{$pasplgblt->tgllahir}}">
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Tanggal Lahir</label>
+                          <input type="text" name="tgl_lahir" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$pasplgblt->tgl_lahir}}">
                         </div>
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
-                          <select class="form-select" name="jeniskelamin" aria-label="Default select example">
-                            <option selected>{{$pasplgblt->jeniskelamin}}</option>
-                            <option value="L">L</option>
-                            <option value="P">P</option>
-                          </select>
+                          <input type="text" name="sex" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$pasplgblt->sex}}">
                         </div>
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Ruang</label>
@@ -61,13 +55,13 @@
                           <label for="started at">
                             Tgl Masuk
                           </label>
-                          <input type="date" id="started at" name="tglmasuk" class="form-control" value="{{$pasplgblt->tglmasuk}}">
+                          <input type="date" name="tglmasuk" class="form-control" value="{{$pasplgblt->tglmasuk}}">
                         </div>
                         <div class="form-group">
                           <label for="started at">
                             Tgl Keluar
                           </label>
-                          <input type="date" id="started at" name="tglkeluar" class="form-control" value="{{$pasplgblt->tglkeluar}}">
+                          <input type="date" name="tglkeluar" class="form-control" value="{{$pasplgblt->tglkeluar}}">
                         </div>
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Dokter Merawat</label>
@@ -117,7 +111,7 @@
                           <label for="started at">
                             Tgl Dilakukan
                           </label>
-                          <input type="date" id="started at" name="tgldilakukan" class="form-control" value="{{$pasplgblt->tgldilakukan}}">
+                          <input type="date"  name="tgldilakukan" class="form-control" value="{{$pasplgblt->tgldilakukan}}">
                         </div>
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Kode ICD-9CM</label>
@@ -296,7 +290,7 @@
                           <label for="started at">
                             Tgl Kontrol
                           </label>
-                          <input type="date" id="started at" name="tglkontrol" class="form-control"  value="{{$pasplgblt->tglkontrol}}">
+                          <input type="date" name="tglkontrol" class="form-control" value="{{$pasplgblt->tglkontrol}}">
                         </div>
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Bawa RS Bila</label>

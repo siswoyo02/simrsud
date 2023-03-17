@@ -83,8 +83,8 @@
                             <th scope="row">{{ $index + $pasplgblt->firstItem() }}</th>
                             <td>{{ $ppb->no_rm }}</td>
                             <td>{{ $ppb->nama }}</td>
-                            <td>{{ $ppb->tgllahir }}</td>
-                            <td>{{ $ppb->jeniskelamin }}</td>
+                            <td>{{ $ppb->tgl_lahir }}</td>
+                            <td>{{ $ppb->sex }}</td>
                             <td>{{ $ppb->ruang }}</td>
                             <td>{{ $ppb->kelas }}</td>
 
@@ -115,6 +115,7 @@
                             <td>{{ $ppb->obatpulang }}</td>
 
                             <td>{{ $ppb->kontrolulang }}</td>
+                            <td>{{ $ppb->tglkontrol }}</td>
                             <td>{{ $ppb->bawarsbila }}</td> --}}
                             <td>
                                 <a href="/tampildatapasienblt/{{$ppb->id}}" class="btn btn-info">Edit</a>

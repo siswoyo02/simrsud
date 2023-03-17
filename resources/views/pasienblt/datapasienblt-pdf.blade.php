@@ -43,7 +43,7 @@
                     <tr style="font-size: 13px; ">
                         <td align="center" style="border-left:2px solid;">&nbsp;</td>
                         <td>Tgl Lahir</td>
-                        <td>:&nbsp;<?php echo $pasplgblt["tgllahir"];?>&nbsp;&nbsp;&nbsp;( <?php echo $pasplgblt["jeniskelamin"];?> )</td>
+                        <td>:&nbsp;<?php echo $pasplgblt["tgl_lahir"];?>&nbsp;&nbsp;&nbsp;( <?php echo $pasplgblt["sex"];?> )</td>
                         
                         <td style="border-right:2px solid;">&nbsp;</td>
                     </tr>
@@ -57,7 +57,7 @@
                     </tr>
                     <tr style="font-size: 13px; ">
                         <td align="center" style="border-left:2px solid;"></td>
-                        <td>Kelas :</td>
+                        <td>Kelas </td>
                         <td>:&nbsp;<?php echo $pasplgblt["kelas"];?></td>
                         <td align="left"></td>
                         <td style="border-right:2px solid;">&nbsp;</td>

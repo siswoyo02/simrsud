@@ -137,6 +137,15 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="/pasienbltbr" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Data Pasien Balita baru
+              
+              </p>
+            </a>
+          </li>
           <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
@@ -751,6 +760,10 @@
 @yield('contentpsnblt')
 @yield('contentpsnblttambah')
 @yield('contentpsnblttampil')
+  <!-- /.content-pasien balita -->
+@yield('contentpsnbltbr')
+@yield('contentpsnblttambahbr')
+@yield('contentpsnblttampilbr')
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-blue">
     <!-- Control sidebar content goes here -->

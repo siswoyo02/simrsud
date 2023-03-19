@@ -40,15 +40,15 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">nama</label>
-                        <input type="text" name="ruang" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $ppbb->nama }}">
+                        <input type="text" name="nama" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $ppbb->nama }}">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">tgl lahir</label>
-                        <input type="text" name="ruang" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $ppbb->tgl_lahir }}">
+                        <input type="text" name="tgl_lahir" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $ppbb->tgl_lahir }}">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Kelamin</label>
-                        <input type="text" name="ruang" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $ppbb->sex }}">
+                        <input type="text" name="sex" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $ppbb->sex }}">
                     </div>
 
                     @endforeach
@@ -70,7 +70,7 @@
                           <label for="exampleInputEmail1" class="form-label">Tgl Masuk</label>
                           <input type="text" name="tglmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div> -->
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="started at">
                             Tgl Keluar
                         </label>
@@ -309,7 +309,7 @@
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Bawa RS Bila</label>
                         <input type="text" name="bawarsbila" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
+                    </div> -->
                 </table>
 
             </div>

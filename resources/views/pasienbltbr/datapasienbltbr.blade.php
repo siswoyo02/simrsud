@@ -1,6 +1,6 @@
 @extends('layout.admin')
 
-@section('contentpsnblt')
+@section('contentpsnbltbr')
 
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -21,10 +21,10 @@
     </div>
 
     <div class="container">
-        <a href="/tambahpasienblt" type="button" class="btn btn-success mb-2">Tambah</a>
+        <a href="/tambahpasienbltbr" type="button" class="btn btn-success mb-2">Tambah</a>
         <div class="row g-3 align-items-center mt-2">
             <div class="col-auto">
-                <form action="/pasienblt" method="GET">
+                <form action="/pasienbltbr" method="GET">
                     <input type="search" id="inputPassword6" name="search" class="form-control mb-2" aria-describedby="passwordHelpInline">
                 </form>
             </div>
@@ -78,65 +78,55 @@
                         @php
                         $no = 1;
                         @endphp
-                        @foreach ($pasplgblt as $index => $ppb)
+                        @foreach ($pasplgbltbr as $index => $ppbbr)
                         <tr>
-                            <th scope="row">{{ $index + $pasplgblt->firstItem() }}</th>
-                            <td>{{ $ppb->no_rm }}</td>
-                            <td>{{ $ppb->nama }}</td>
-<<<<<<< HEAD
-                            <td>{{ $ppb->tgl_lahir }}</td>
-                            <td>{{ $ppb->sex }}</td>
-=======
-                            <td>{{ $ppb->tgllahir->format('d-m-Y') }}</td>
-                            <td>{{ $ppb->jeniskelamin }}</td>
->>>>>>> 0775cabca8e370f498f17bd84f91e8aacb854e10
-                            <td>{{ $ppb->ruang }}</td>
-                            <td>{{ $ppb->kelas }}</td>
+                            <th scope="row">{{ $index + $pasplgbltbr->firstItem() }}</th>
+                            <td>{{ $ppbbr->no_rm }}</td>
+                            <td>{{ $ppbbr->nama }}</td>
+                            <td>{{ $ppbbr->jeniskelamin }}</td>
+                            <td>{{ $ppbbr->tgllahir->format('d-m-Y') }}</td>
+                            <td>{{ $ppbbr->ruang }}</td>
+                            <td>{{ $ppbbr->kelas }}</td>
 
-                            <td>{{ $ppb->tglmasuk->format('d-m-Y') }}</td>
-                            <td>{{ $ppb->tglkeluar->format('d-m-Y') }}</td>
-                            {{-- <td>{{ $ppb->doktermerawat }}</td> 
-                            <td>{{ $ppb->indikasirawat }}</td>
-                            <td>{{ $ppb->diagnosakeluar }}</td>
-                            <td>{{ $ppb->kodeicd_10 }}</td>
-                            <td>{{ $ppb->komplikasi }}</td>
-                            <td>{{ $ppb->komorbid }}</td>
-                            <td>{{ $ppb->tindakan }}</td>
-                            <td>{{ $ppb->tgldilakukan->format('d-m-Y') }}</td>
-                            <td>{{ $ppb->kodeicd_9cm }}</td>
+                            <td>{{ $ppbbr->tglmasuk->format('d-m-Y') }}</td>
+                            <td>{{ $ppbbr->tglkeluar->format('d-m-Y') }}</td>
+                            {{-- <td>{{ $ppbbr->doktermerawat }}</td> 
+                            <td>{{ $ppbbr->indikasirawat }}</td>
+                            <td>{{ $ppbbr->diagnosakeluar }}</td>
+                            <td>{{ $ppbbr->kodeicd_10 }}</td>
+                            <td>{{ $ppbbr->komplikasi }}</td>
+                            <td>{{ $ppbbr->komorbid }}</td>
+                            <td>{{ $ppbbr->tindakan }}</td>
+                            <td>{{ $ppbbr->tgldilakukan->format('d-m-Y') }}</td>
+                            <td>{{ $ppbbr->kodeicd_9cm }}</td>
 
-                            <td>{{ $ppb->keluhanutama }}</td>
-                            <td>{{ $ppb->gejalapenyerta }}</td>
-                            <td>{{ $ppb->penyakitdahulu }}</td>
-                            <td>{{ $ppb->bb }}</td>
-                            <td>{{ $ppb->tb }}</td>
-                            <td>{{ $ppb->pemeriksaanpenunjang }}</td>
-                            <td>{{ $ppb->laboratorium }}</td>
-                            <td>{{ $ppb->pencintraandiagnostik }}</td>
-                            <td>{{ $ppb->lainnya }}</td>
-                            <td>{{ $ppb->konsultasi }}</td>
-                            <td>{{ $ppb->obatselamarawat }}</td>
-                            <td>{{ $ppb->kondisisaatpulang }}</td>
-                            <td>{{ $ppb->obatpulang }}</td>
+                            <td>{{ $ppbbr->keluhanutama }}</td>
+                            <td>{{ $ppbbr->gejalapenyerta }}</td>
+                            <td>{{ $ppbbr->penyakitdahulu }}</td>
+                            <td>{{ $ppbbr->bb }}</td>
+                            <td>{{ $ppbbr->tb }}</td>
+                            <td>{{ $ppbbr->pemeriksaanpenunjang }}</td>
+                            <td>{{ $ppbbr->laboratorium }}</td>
+                            <td>{{ $ppbbr->pencintraandiagnostik }}</td>
+                            <td>{{ $ppbbr->lainnya }}</td>
+                            <td>{{ $ppbbr->konsultasi }}</td>
+                            <td>{{ $ppbbr->obatselamarawat }}</td>
+                            <td>{{ $ppbbr->kondisisaatpulang }}</td>
+                            <td>{{ $ppbbr->obatpulang }}</td>
 
-<<<<<<< HEAD
-                            <td>{{ $ppb->kontrolulang }}</td>
-                            <td>{{ $ppb->tglkontrol }}</td>
-=======
-                            <td>{{ $ppb->kontrolulang->format('d-m-Y') }}</td>
->>>>>>> 0775cabca8e370f498f17bd84f91e8aacb854e10
-                            <td>{{ $ppb->bawarsbila }}</td> --}}
+                            <td>{{ $ppbbr->kontrolulang->format('d-m-Y') }}</td>
+                            <td>{{ $ppbbr->bawarsbila }}</td> --}}
                             <td>
-                                <a href="/tampildatapasienblt/{{$ppb->id}}" class="btn btn-info">Edit</a>
-                                <a href="/exportpdfdatapasienblt/{{ $ppb->id }}" class="btn btn-secondary">Print</a>
-                                <a href="/deletedatapasienblt/{{$ppb->id}}" class="btn btn-danger">Hapus</a>
+                                <a href="/tampildatapasienbltbr/{{$ppbbr->id}}" class="btn btn-info">Edit</a>
+                                <a href="/exportpdfdatapasienbltbr/{{ $ppbbr->id }}" class="btn btn-secondary">Print</a>
+                                <a href="/deletedatapasienbltbr/{{$ppbbr->id}}" class="btn btn-danger">Hapus</a>
 
                             </td>
                         </tr>
                         @endforeach
                     </tbody>
                 </table>
-                {{ $pasplgblt->links('pagination::Bootstrap-4') }}
+                {{ $pasplgbltbr->links('pagination::Bootstrap-4') }}
             </div>
         </div>
     </div>

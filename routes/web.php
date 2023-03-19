@@ -3,7 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\RpasienpulangController;
+use App\Http\Controllers\MpasienpulangController;
 use App\Http\Controllers\RpasienpulangbltController;
+use App\Http\Controllers\RpasienpulangbltbrController;
+use App\Http\Controllers\MspasienController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,4 +55,15 @@ Route::get('/exportpdfdatapasienblt/{id}',[RpasienpulangbltController::class,'ex
 
 Route::get('/pasplgbalita',[RpasienpulangbltController::class,'pasplgbalita'])->name('pasplgbalita');
 Route::get('/pasplgbalitaagama',[RpasienpulangbltController::class,'pasplgbalitaagama'])->name('pasplgbalitaagama');
+
+//ttg Pasien Pulang Balita
+Route::get('/pasienbltbr',[RpasienpulangbltbrController::class,'pas_plgbltbr'])->name('pasienbltbr');
+Route::get('/tambahpasienbltbr',[RpasienpulangbltbrController::class,'tambahpasienbltbr'])->name('tambahpasienbltbr');
+Route::post('/insertdatapasienbltbr',[RpasienpulangbltbrController::class,'insertdatapasienbltbr'])->name('insertdatapasienbltbr');
+Route::get('/tampildatapasienbltbr/{id}',[RpasienpulangbltbrController::class,'tampildatapasienbltbr'])->name('tampildatapasienbltbr');
+Route::post('/updatedatapasienbltbr/{id}',[RpasienpulangbltController::class,'updatedatapasienbltbr'])->name('updatedatapasienbltbr');
+Route::get('/deletedatapasienbltbr/{id}',[RpasienpulangbltbrController::class,'deletedatapasienbltbr'])->name('deletedatapasienbltbr');
+//export pdf
+Route::get('/exportpdfdatapasienbltbr/{id}',[RpasienpulangbltbrController::class,'exportpdfdatapasienbltbr'])->name('exportpdfdatapasienbltbr');
+
 

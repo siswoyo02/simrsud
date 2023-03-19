@@ -49,6 +49,7 @@ class RpasienpulangbltController extends Controller
 
         return view('pasienblt/datapasienblt',compact('pasplgblt'));
     }
+    
 
     public function tambahpasienblt(){
         $q = request()->get('query');
